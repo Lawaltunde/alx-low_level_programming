@@ -1,15 +1,11 @@
 #include <stdio.h>
-/*
+/**
+ *main - Entry point
  *
- *  function puts is used
- *
- *  the function return zero value.
- *
- *  
+ *return zero
  */
 int main(void)
-{
-	
+{	
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
