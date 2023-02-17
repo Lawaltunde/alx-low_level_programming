@@ -9,7 +9,7 @@ int main(void)
 	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
 	int a = 0;
 
-	while (a < 23)
+	while (a < 26)
 	{
 		putchar(alphabet[a]);
 		a++;
