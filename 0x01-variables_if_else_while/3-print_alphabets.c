@@ -7,7 +7,6 @@
 int main(void)
 {
 	int i = 0;
-	int j = 0;
 	char uppLow_alph[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	while (i < 52)
