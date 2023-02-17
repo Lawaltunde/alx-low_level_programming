@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-	int i = 26;
+	int i = 27;
 	char Low_alph[26] = "abcdefghijklmnopqrstuvwxyz";
 
-	while (i > 1)
+	while (i > 0)
 	{
 		putchar(Low_alph[i]);
 		i--;
