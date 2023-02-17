@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Starting point
+ * main - Determines if a number is positive, negative or zero.
  *
- * Return: vale 0 (success)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
