@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	int i = 24;
-	char Low_alph[24] = "abcdfghijklmnoprstuvwxyz";
+	int i = 26;
+	char Low_alph[26] = "abcdefghijklmnopqrstuvwxyz";
 
 	while (i > 0)
 	{
