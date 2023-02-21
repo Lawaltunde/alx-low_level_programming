@@ -1,11 +1,12 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * add - function that adds two integers 
+ * add - function that adds two integers.
  *
  * @a: first integer number.
  *
- * @b: second integer number.
+ * @b: second integer number
  *
  * Return: the result of the addition
  */
