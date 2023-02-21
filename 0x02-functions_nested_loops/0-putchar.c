@@ -3,7 +3,7 @@
 /**
  * main - Starting point of a program that prints _putchar, and a new line.
  *
- * Result: Always 0 (Awesome)
+ * Return: Always 0 (Awesome)
  */
 int main(void)
 {
