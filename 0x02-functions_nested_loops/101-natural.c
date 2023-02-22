@@ -12,7 +12,7 @@ int main(void)
 	{
 		if (n % 3 == 0 || n % 5 == 0)
 		{
-			printf("%d, ", n);
+			printf("%d\n", n);
 		}
 	};
 	return (0);
