@@ -8,7 +8,7 @@ int main(void)
 {
 	int n;
 
-	for (n = 1; n < 1024; n++)
+	for (n = 10; n < 24; n++)
 	{
 		if (n % 3 == 0 || n % 5 == 0)
 		{
