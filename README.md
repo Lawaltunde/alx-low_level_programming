@@ -13,5 +13,5 @@ The directory 0x04-more_functions_nested_loops contains More functions, more nes
 The directory 0x05-pointers_arrays_strings contains C - Pointers, arrays and strings projects.
 
 The directory 0x06-pointers_arrays_strings contains 0x06. C - More pointers, arrays and strings projects.
-
+The directory 0x07-pointers_arrays_strings contains Even more pointers, arrays and strings project.
 
