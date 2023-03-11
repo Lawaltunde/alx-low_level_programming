@@ -4,28 +4,28 @@
 /**
  * _abs - Computes the absolute value of an integer
  *
- * @i: input number as an integer.
+ * @n: input number as an integer.
  *
  * Return: Values
  */
-int _abs(int i)
+int _abs(int n)
 {
-	scanf("%d", &i);
+	scanf("%d", &n);
 
-	if (i < 0)
+	if (n < 0)
 	{
-		i *= -1;
-		return (i);
+		n *= -1;
+		return (n);
 	}
 	else
-	if (i > 0)
+	if (n > 0)
 	{
-		i *= 1;
-		return (i);
+		n *= 1;
+		return (n);
 	}
 	else
 	{
-		i = 0;
+		n = 0;
 	return (0);
 	}
 }

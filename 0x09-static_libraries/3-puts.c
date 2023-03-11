@@ -3,23 +3,23 @@
 /**
  * _puts - function that prints a string, followed by a new line,
  * to stdout.
- * @str: input of char datatype.
+ * @s: input of char datatype.
  * Return: Void.
  */
 
-void _puts(char *str)
+void _puts(char *s)
 {
 	int i = 0;
 
 	while (i >= 0)
 	{
-		if (str[i] == '\0')
+		if (s[i] == '\0')
 		{
 			_putchar('\n');
 			break;
 		}
 
-	_putchar(str[i]);
+	_putchar(s[i]);
 	i++;
 	}
 
