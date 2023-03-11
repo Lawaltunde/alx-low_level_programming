@@ -17,3 +17,7 @@ The directory 0x06-pointers_arrays_strings contains 0x06. C - More pointers, arr
 The directory 0x07-pointers_arrays_strings contains Even more pointers, arrays and strings project.
 
 The directory 0x08-recursion contains C - Recursion.
+
+The directory 0x09-static_libraries contains Static libraries project.
+
+The directory 0x0A-argc_argv contains 0x0A. C - argc, argv project
