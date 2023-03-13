@@ -20,4 +20,6 @@ The directory 0x08-recursion contains C - Recursion.
 
 The directory 0x09-static_libraries contains Static libraries project.
 
-The directory 0x0A-argc_argv contains 0x0A. C - argc, argv project
+The directory 0x0A-argc_argv contains 0x0A. C - argc, argv project.
+
+The directory 0x0B-malloc_free contains 0x0B. C - malloc, free project
