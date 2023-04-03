@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
-* _memset - fills memory with a constant byte.
-* @s: input pointer tgat stores address.
-* @b: byte
-* @n: size
-* Return: return pointer to a memory address s.
+* _memset - function that fills memory with a constant byte.
+* @s: input pointer which  stores address.
+* @b: number of byte
+* @n: size.
+* Return: returns s.
 */
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	int i;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < (int) n; i++)
 		*(s + i) = b;
 
 	return (s);
