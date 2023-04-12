@@ -2,41 +2,52 @@
 #include <stdlib.h>
 
 /**
- * str_concat - function that concatenates two strings.
- * @s1: first input string.
- * @s2: second input string.
- * Return: pointer
+ * str_concat -a function that concatenates two strings.
+ * @s1: dest string.
+ * @s2: source string.
+ * Return: pointer should point to a newly allocated
+ * space in memory.
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *dup;
-	unsigned int i, j, k, end;
+	unsigned int i, m, len1, len2, j = 0, k = 0, count1 = 0, count2 = 0;
+	char *conc;
 
 	if (s1 == NULL)
-		s1 = "";
+		return (s1 = " ");
+
 	if (s2 == NULL)
-		s2 = "";
+		return (s2 = " ");
 
-	for (i = 0; s1[i] != '\0'; i++)
-		;
-
-	for (j = 0; s2[j] != '\0'; j++)
-		;
-
-	dup = malloc(sizeof(char) * (i + j + 1));
-
-	if (dup == NULL)
+	while (s1[j] != '\0')
 	{
-		free(dup);
+		count1++;
+		j++;
+	}
+	len1 = count1;
+
+	while (s2[k] != '\0')
+	{
+		count2++;
+		k++;
+	}
+	len2 = count2;
+
+	conc = ((char *)malloc((len1 + 1) * sizeof(char)));
+
+	if (conc == NULL)
+	{
+		free(conc);
 		return (NULL);
 	}
 
-	for (k = 0; k < i; k++)
-		dup[k] = s1[k];
+	for (i = 0; i <= len1; i++)
+		conc[i] = s1[i];
 
-	end = j;
-	for (j = 0; j <= end; k++, j++)
-		dup[k] = s2[j];
+	conc = (char *)realloc(conc, ((len1 + len2 + 1) * sizeof(char)));
 
-	return (dup);
+	for (m = 0; m <= (len1 + len2 + 1); m++)
+		conc[len1 + m] = s2[m];
+	return (conc);
+	free(conc);
 }
