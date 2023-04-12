@@ -10,7 +10,7 @@
 char *_strdup(char *str)
 {
 	char *dup;
-	unsigned int len, count = 0, i = 0;
+	unsigned int len, count = 0, i = 0, j;
 
 	while (str[i] != '\0')
 	{
@@ -22,13 +22,13 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	dup = malloc((len + 1) * sizeof(char));
+	dup = (char *)malloc((len + 1) * sizeof(char));
 
 	if (dup == NULL)
 		return (NULL);
 
-	for (i = 0; i <= len; i++)
-		dup[i] = str[i];
+	for (j = 0; j <= len; j++)
+		dup[j] = str[j];
 
 	return (dup);
 }
