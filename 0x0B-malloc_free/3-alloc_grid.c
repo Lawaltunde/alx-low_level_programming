@@ -8,36 +8,36 @@
  * @height: height of the array.
  * Return: a pointer to a 2 dimensional array of integers.
  */
+
 int **alloc_grid(int width, int height)
 {
-	int **ptr;
-	int i, j;
+	int k, l;
+	int ** grid;
 
-	if (width < 1 || height < 1)
-		return (NULL);
+	if (width <= 0 || height <= 0)
+		return NULL;
+	grid = malloc(height * sizeof(int *));
+	if (grid == NULL)
+		return NULL;
 
-	ptr = malloc(height * sizeof(int *));
-	if (ptr == NULL)
+	for (k = 0; k < height; k++)
 	{
-		free(ptr);
-		return (NULL);
-	}
-
-	for (i = 0; i < height; i++)
-	{
-		ptr[i] = malloc(width * sizeof(int));
-		if (ptr[i] == NULL)
+		grid[k] = malloc(width * sizeof(int));
+		if (grid[k] == NULL)
 		{
-			for (i--; i >= 0; i--)
-				free(ptr[i]);
-			free(ptr);
-			return (NULL);
+			for (k--; k >= 0; k--)
+				free (grid[k]);
+			free (grid[k]);
+			return NULL;
 		}
 	}
+	for (k = 0; k < height; k++)
+	{
+		for (l = 0; l < width; l++)
+		{
+			grid[k][l] = 0;
+		}
 
-	for (i = 0; i < height; i++)
-		for (j = 0; j < width; j++)
-			ptr[i][j] = 0;
-
-	return (ptr);
+	}
+	return (grid);
 }
