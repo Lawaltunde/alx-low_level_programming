@@ -28,5 +28,5 @@ void print_dog(struct dog *d)
 	}
 
 	else
-		printf(" ");
+		putchar('\0');
 }
