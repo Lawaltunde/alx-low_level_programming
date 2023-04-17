@@ -2,15 +2,16 @@
 #include <stdlib.h>
 
 /**
- * argstostr - concatenates all the arguments of a program.
+ * argstostr - a function that concatenates all
+ * the arguments of your program.
  * @ac: argument count.
  * @av: argument vector.
- *
- * Return: pointer of an array of char
+ * Return: a pointer to a new string, or NULL
+ * if it fails
  */
 char *argstostr(int ac, char **av)
 {
-	char *aout;
+	char *ptr;
 	int c, i, j, ia;
 
 	if (ac == 0)
@@ -26,11 +27,11 @@ char *argstostr(int ac, char **av)
 		c++;
 	}
 
-	aout = malloc((c + 1) * sizeof(char));
+	ptr = malloc((c + 1) * sizeof(char));
 
-	if (aout == NULL)
+	if (ptr == NULL)
 	{
-		free(aout);
+		free(ptr);
 		return (NULL);
 	}
 
@@ -38,15 +39,15 @@ char *argstostr(int ac, char **av)
 	{
 		if (av[i][j] == '\0')
 		{
-			aout[ia] = '\n';
+			ptr[ia] = '\n';
 			i++;
 			ia++;
 			j = 0;
 		}
 		if (ia < c - 1)
-			aout[ia] = av[i][j];
+			ptr[ia] = av[i][j];
 	}
-	aout[ia] = '\0';
+	ptr[ia] = '\0';
 
-	return (aout);
+	return (ptr);
 }
