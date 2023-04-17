@@ -25,3 +25,6 @@ The directory 0x0A-argc_argv contains 0x0A. C - argc, argv project.
 The directory 0x0B-malloc_free contains 0x0B. C - malloc, free project.
 
 The directory 0x0C-more_malloc_free contains 0x0C. C - More malloc, free project.
+
+The directory 0x0E-structures_typedef CONTAINS 0x0E. C - Structures, typedef Project.
+
