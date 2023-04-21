@@ -1,5 +1,6 @@
-#include <stdarg>
+#include <stdarg.h>
 #include "variadic_functions.h"
+#include <stdio.h>
 
 /**
  * print_all - a function that prints anything.
@@ -32,13 +33,13 @@ void print_all(const char * const format, ...)
 			printf("%c", va_arg(anyThing, int)), count = 1;
 			break;
 		case 'i':
-			printf("%d", va_arg(anything, int)), count = 1;
+			printf("%d", va_arg(anyThing, int)), count = 1;
 			break;
 		case 'f':
-			printf("%f", va_arg(anything, double)), count = 1;
+			printf("%f", va_arg(anyThing, double)), count = 1;
 			break;
 		case 's':
-			str = va_arg(anything, char *), count = 1;
+			str = va_arg(anyThing, char *), count = 1;
 			if (!str)
 			{
 				printf("(nil)");
@@ -50,6 +51,4 @@ void print_all(const char * const format, ...)
 	}
 	printf("\n");
 	va_end(anyThing);
-}
-
 }
