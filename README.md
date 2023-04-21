@@ -32,4 +32,8 @@ The directory 0x0D-preprocessor contains 0x0D. C - Preprocessor project.
 
 The directory 0x0F-function_pointers CONTAINS 0x0F. C - Function pointers project.
 
+The directory 0x10-variadic_functions CONTAINS 0x10. C - Variadic functions project.
+
+
+
 
