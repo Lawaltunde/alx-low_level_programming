@@ -34,6 +34,7 @@ The directory 0x0F-function_pointers CONTAINS 0x0F. C - Function pointers projec
 
 The directory 0x10-variadic_functions CONTAINS 0x10. C - Variadic functions project.
 
+The directory 0x12-singly_linked_lists contains 0x12. C - Singly linked lists project.
 
 
 
