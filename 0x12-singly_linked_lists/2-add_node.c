@@ -29,7 +29,7 @@ list_t *add_node(list_t **head, const char *str)
 	{
 		*head = newNode;
 		newNode->next = 0;
-	       newNode->len = char_num;	
+		newNode->len = char_num;
 	}
 	else
 	{
