@@ -4,7 +4,7 @@
  * listint_len -  function that returns the number of
  * elements in a linked listint_t list.
  * @h: head of the linked list
- * Retunr: returns the number of elements in a linked.
+ * Return: returns the number of elements in a linked.
  */
 
 size_t listint_len(const listint_t *h)
@@ -16,9 +16,7 @@ size_t listint_len(const listint_t *h)
 	temp_Node = h;
 
 	if (h == NULL)
-	{
 		h = 0;
-	}
 
 	while (temp_Node != NULL)
 	{
