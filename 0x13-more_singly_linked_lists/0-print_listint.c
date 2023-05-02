@@ -11,12 +11,16 @@
 
 size_t print_listint(const listint_t *h)
 {
+	const listint_t *temp_Node;
 	unsigned int r_val = 0;
 
-	while (h != NULL)
+	temp_Node = malloc(sizeof(listint_t));
+	temp_Node = h;
+
+	while (temp_Node != NULL)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
+		printf("%d\n", temp_Node->n);
+		temp_Node = temp_Node->next;
 		r_val++;
 	}
 	return (r_val);
