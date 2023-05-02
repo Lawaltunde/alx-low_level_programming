@@ -18,7 +18,6 @@ size_t listint_len(const listint_t *h)
 	if (h == NULL)
 	{
 		h = 0;
-		return (count);
 	}
 
 	while (temp_Node != NULL)
