@@ -18,7 +18,7 @@ size_t print_listint(const listint_t *h)
 
 	if (h == NULL)
 	{
-		return (r_val);
+		return (NULL);
 	}
 	temp_Node = h;
 
