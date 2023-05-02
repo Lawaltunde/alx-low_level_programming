@@ -19,6 +19,7 @@ size_t print_listint(const listint_t *h)
 		h = 0;
 	}
 	temp_Node = h;
+	h = temp_Node;
 
 	while (temp_Node != NULL)
 	{
