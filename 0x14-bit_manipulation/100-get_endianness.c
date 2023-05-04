@@ -1,22 +1,17 @@
 #include "main.h"
 
 /**
- * flip_bits - returns the number of bits you would
- * need to flip to get from one number to another
- * @n: number one.
- * @m: number two.
+ * get_endianness - checks the endianness
  *
- * Return: number of bits.
+ * Return: 0 if big endian, 1 if little endian
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+int get_endianness(void)
 {
-	unsigned int num_bits;
+	unsigned int n;
+	char *c;
 
-	for (num_bits = 0; n || m; n >>= 1, m >>= 1)
-	{
-		if ((n & 1) != (m & 1))
-			num_bits++;
-	}
+	n = 1;
+	c = (char *) &n;
 
-	return (num_bits);
+	return ((int)*c);
 }
