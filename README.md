@@ -36,6 +36,8 @@ The directory 0x10-variadic_functions CONTAINS 0x10. C - Variadic functions proj
 
 The directory 0x12-singly_linked_lists contains 0x12. C - Singly linked lists project.
 
-The directory 0x13-more_singly_linked_lists contains 0x13. C - More singly linked lists project
+The directory 0x13-more_singly_linked_lists contains 0x13. C - More singly linked lists project.
+
+The directory  0x14-bit_manipulation contains 0x14. C - Bit manipulation project.
 
 
