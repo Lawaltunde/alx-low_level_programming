@@ -3,8 +3,8 @@
 #include <time.h>
 
 /**
- * main - execution starts here
- * @n: variable int data-type
+ * main - Entry point
+ * @n: variable int.
  * Return: Always 0 (Success)
  */
 int main(void)
