@@ -18,8 +18,15 @@ int main(void)
 				putchar(47 + i);
 				putchar(47 + j);
 				putchar(47 + k);
-				putchar(',');
-				putchar(' ');
+				if (i < 8)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+				else
+				{
+					putchar('\n');
+				}
 			}
 		}
 	}
