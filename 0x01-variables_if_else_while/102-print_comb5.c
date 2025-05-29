@@ -1,7 +1,6 @@
 #include <stdio.h>
-/*
- *
- * main - Execution starts here
+/**
+ * main - Entry point
  *
  * Return: success (0)
  */
@@ -12,11 +11,11 @@ int main(void)
 
 	for (i = 1; i <= 10; i++)
 	{
-		for(j = i; j <= 10; j++)
+		for (j = i; j <= 10; j++)
 		{
 			for (k = j; k <= 10; k++)
 			{
-				for (l = k; + l <=10; l++)
+				for (l = k; l <= 10; l++)
 				{
 					putchar(47 + i);
 					putchar(47 + j);
