@@ -3,8 +3,8 @@
 #include <stdbool.h>
 /**
   * print_sign - function that prints the sign of a number
-  * @c: argument
-  * Return: 1 and prints + (n > 0), 0 and prints 0 (n = 0), -1 and prints - (n < 0)
+  * @n: argument
+  * Return: 1 & prn + (n > 0), 0 & prn 0 (n = 0), -1 & prn - (n < 0)
   */
 int print_sign(int n)
 {
