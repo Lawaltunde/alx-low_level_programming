@@ -3,7 +3,7 @@
 #include <stdbool.h>
 /**
   * _islower - function that checks for lowercase character
-  *
+  * @c: argument
   * Return: 1 if c is lower, 0 otherwise
   */
 int _islower(int c)
