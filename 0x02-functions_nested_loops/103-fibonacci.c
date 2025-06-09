@@ -7,7 +7,7 @@
   */
 int main(void)
 {
-	int a = 1, b = 2, c = 0, temp, sum;
+	int a = 1, b = 2, c = 0, temp, sum = 0;
 
 	while (c <= 4000000)
 	{
@@ -17,7 +17,7 @@ int main(void)
 		a = temp;
 		if (c % 2 == 0)
 		{
-			sum = c;
+			sum += c;
 		}
 	}
 	printf("%d\n", sum);
