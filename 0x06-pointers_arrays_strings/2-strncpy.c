@@ -21,5 +21,9 @@ char *_strncpy(char *dest, char *src, int n)
 		i++;
 		temp++;
 	}
+	if (i < n)
+	{
+		*temp = '\0';
+	}
 	return (dest);
 }
