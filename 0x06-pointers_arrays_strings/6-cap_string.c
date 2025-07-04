@@ -9,27 +9,25 @@
 
 char *cap_string(char *src)
 {
-	char *temp;
-	int holder, i = 0;
+	int i = 0;
 
-	temp = src;
-	holder = temp[0];
-	if (holder >= 97 && holder <= 122)
+	if (src[i] >= 'a' && src[i] <= 'z')
 	{
-		src[0] = (holder - 32);
+		src[i] -= 32;
 	}
-	while (*temp != '\0')
+	while (src[i] != '\0')
 	{
-		if (temp[i] == ' ' || temp[i] == ',' || temp[i] == ';' || temp[i] == '.' || temp[i] == '!' || temp[i] == '?' || temp[i] == '\"' || temp[i] == '(' || temp[i] == ')' || temp[i] == '{' || temp[i] == '}')
+        if (src[i] == ' ' || src[i] == '\t' || src[i] == '\n' || 
+			src[i] == ',' || src[i] == ';' || src[i] == '.' || 
+			src[i] == '!' || src[i] == '?' || src[i] == '"' || 
+			src[i] == '(' || src[i] == ')' || src[i] == '{' || src[i] == '}')
+	{
+		if (src[i + 1] >= 'a' && src[i + 1] <= 'z')
 		{
-			holder = temp[i + 1];
-			if (holder >= 97 && holder <= 122)
-			{
-				temp[i + 1] = (holder - 32);
-			}
+                	src[i + 1] -= 32;
 		}
-		temp++;
-		i++;
+        }
+	i++;
 	}
-	return (src);
+	return src;
 }
