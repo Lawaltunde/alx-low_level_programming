@@ -15,12 +15,12 @@ char *string_toupper(char *src)
 	while (*temp != '\0')
 	{
 		i = *temp;
-		if(i >= 97 && i <= 122)
+		if (i >= 97 && i <= 122)
 		{
 			i -= 32;
 		}
 		*temp = i;
 		temp++;
 	}
-	return src;
+	return (src);
 }
