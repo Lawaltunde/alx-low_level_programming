@@ -2,7 +2,24 @@
 #include "main.h"
 
 /**
+  * _strlen - function that calc str len
+  * @s: pointer to char
+  * @i: int type
+  * Return: int value (success)
+  */
+
+int _strlen(char *s, int i)
+{
+	if (s[i] == '\0')
+	{
+		return (i);
+	}
+	return (_strlen(s, i + 1));
+}
+
+/**
   * is_helper - function
+  * @s: pointer to char
   * @start: int type
   * @end: int type
   * Return: int (success)
@@ -29,16 +46,11 @@ int is_helper(char *s, int start, int end)
 
 int is_palindrome(char *s)
 {
-	int end, count = 0;
+	int len = _strlen(s, 0);
 
 	if (*s == ' ')
 	{
 		return (1);
 	}
-	while (s[count] != '\0')
-	{
-		count++;
-	}
-	end = count - 1;
-	return (is_helper(s, 0, end));
+	return (is_helper(s, 0, len - 1));
 }
