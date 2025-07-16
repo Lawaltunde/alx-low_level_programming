@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 /**
   * main - main function
@@ -10,11 +11,12 @@
 int main(int argc, char *argv[])
 {
 	int i = 1, sum = 0;
+	bool check = true;
 
 	if (argc < 2)
 	{
 		printf("%d\n", 0);
-		return (0);
+		check = false;
 	}
 	while (argc-- && argc != 0)
 	{
@@ -29,6 +31,9 @@ int main(int argc, char *argv[])
 		}
 		i++;
 	}
-	printf("%d\n", sum);
+	if (check)
+	{
+		printf("%d\n", sum);
+	}
 	return (0);
 }
