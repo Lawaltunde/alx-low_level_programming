@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-/** 
+/**
   * _calloc - function that allocates memory for an array
   * @nmemb: unsigned int arg
   * @size: unsigned int type arg
