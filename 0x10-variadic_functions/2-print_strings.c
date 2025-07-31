@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_numbers - function that prints numbers
+ * print_strings - function that prints numbers
  * @separator: pointer to char
  * @n: unsigned int typ
  * Return: Nothing
@@ -33,5 +33,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		i++;
 	}
+	va_end(ap);
 	printf("\n");
 }
