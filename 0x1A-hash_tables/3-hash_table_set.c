@@ -16,15 +16,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !key || !*key)
 		return (0);
-
 	size_ = htptr->size;
 	index_ = key_index((const unsigned char *)key, size_);
-
 	if (index_ >= size_)
 	{
 		return (0);
 	}
-
 	current = htptr->array[index_];
 	while (current)
 	{
@@ -36,7 +33,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		current = current->next;
 	}
-
 	temp = malloc(sizeof(hash_node_t));
 	if (!temp)
 		return (0);
@@ -53,6 +49,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	temp->next = htptr->array[index_];
 	htptr->array[index_] = temp;
-
 	return (1);
 }
