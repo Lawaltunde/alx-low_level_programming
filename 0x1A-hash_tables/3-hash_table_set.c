@@ -11,7 +11,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_table_t *htptr = ht;
-	hash_node_t *temp = NULL;
+	hash_node_t *temp = NULL, *current = NULL;
 	unsigned long int size_,  index_;
 
 	if (!ht || !key || !*key)
@@ -20,44 +20,39 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	size_ = htptr->size;
 	index_ = key_index((const unsigned char *)key, size_);
 
-	if (size_ < index_)
+	if (index_ >= size_)
 	{
-		free(htptr);
 		return (0);
 	}
 
-	if (htptr->array[index_])
+	current = htptr->array[index_];
+	while (current)
 	{
-		temp = (hash_node_t *)malloc(sizeof(hash_node_t));
-		if (!temp)
+		if (strcmp(current->key, key) == 0)
 		{
-			free(htptr);
-			return (0);
+			free(current->value);
+			current->value = strdup(value);
+			return (1);
 		}
-		temp->key = (char *)malloc(strlen(key) + 1);
-		temp->value = (char *)malloc(strlen(value) + 1);
-		if (!(temp->key) && !(temp->value))
-		{
-			free(htptr);
-			return (0);
-		}
-		strcpy(temp->value, value);
-		strcpy(temp->key, key);
+		current = current->next;
+	}
 
-		temp->next = (htptr->array[index_])->next;
-		(htptr->array[index_])->next = temp;
-	}
-	else
+	temp = malloc(sizeof(hash_node_t));
+	if (!temp)
+		return (0);
+
+	temp->key = strdup(key);
+	temp->value = strdup(value);
+	if (!temp->key || !temp->value)
 	{
-		(htptr->array[index_])->value = (char *)malloc(sizeof(value) + 1);
-		(htptr->array[index_])->key = (char *)malloc(sizeof(key) + 1);
-		if (!((htptr->array[index_])->value) && !((htptr->array[index_])->key))
-		{
-			free(htptr);
-			return (0);
-		}
-		strcpy((htptr->array[index_])->value, value);
-		strcpy((htptr->array[index_])->key, key);
+		free(temp->key);
+		free(temp->value);
+		free(temp);
+		return (0);
 	}
+
+	temp->next = htptr->array[index_];
+	htptr->array[index_] = temp;
+
 	return (1);
 }
