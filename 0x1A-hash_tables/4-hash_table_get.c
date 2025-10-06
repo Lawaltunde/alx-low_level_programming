@@ -15,10 +15,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int index;
 
 
-	if (!ht || !*key || !key)
+	if (!ht || !key || !*key)
 		return (NULL);
 
-	index = key_index((unsigned char *)key, htptr->size);
+	index = key_index((const unsigned char *)key, htptr->size);
 	current = htptr->array[index];
 
 	while (current)
@@ -28,6 +28,5 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 		current = current->next;
 	}
-	free(current);
 	return (NULL);
 }
